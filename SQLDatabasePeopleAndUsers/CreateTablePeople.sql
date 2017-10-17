@@ -1,0 +1,11 @@
+CREATE TABLE People
+(
+	Id INT PRIMARY KEY IDENTITY(1,1),
+	[Name] NVARCHAR(200) NOT NULL,
+	Picture VARBINARY,
+	Height FLOAT(2),
+	[Weight] FLOAT(2),
+	Gender NVARCHAR(1) NOT NULL CHECK(Gender in('M','F')),
+	Birthdate DATE NOT NULL,
+	Biography NVARCHAR(MAX)
+)
